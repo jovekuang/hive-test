@@ -70,7 +70,7 @@ public class GenericUDTFCustomExplode extends GenericUDTF {
                     return; // we may want to throw an exception to let the user know that custom_explode takes an array of 3 elements
                 }
                 for (int newColumnValue = NumberUtils.toInt(list.get(0).toString());
-                       newColumnValue < NumberUtils.toInt(list.get(1).toString());
+                       newColumnValue <= NumberUtils.toInt(list.get(1).toString());
                        newColumnValue+=NumberUtils.toInt(list.get(2).toString())) { // more error handling on invalid inputs
                     forwardListObj[0] = list.get(0); // first column
                     forwardListObj[1] = list.get(1); // second column
